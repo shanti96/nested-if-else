@@ -7,12 +7,10 @@ if atm_card=="right side" or atm_card=="RIGHT SIDE":
             type_option=input("select the transation option ")
             if type_option=="withdraw" or type_option=="WITHDRAW":
                 account_type=input("select the account type ")
-                if account_type=="savings" or account_type=="SAVINGS":    
-                    withdraw=int(input("enter eithdraw money "))
-                    if withdraw<=500 and withdraw<=20000:
-                        press_key=input("pressing the keypad ok ")
-                        amount=int(input("enter amount "))
-                        if amount>=500 and amount<=2000 and amount%500==0:
+                if account_type=="savings" or account_type=="SAVINGS": 
+                    amount=int(input("enter amount "))
+                    press_key=input("pressing the keypad ok ")
+                    if amount>=500 and amount<=2000 and amount%500==0:
                             a=withdraw//2000
                             b=withdraw%2000
                             c=b//500
@@ -22,10 +20,8 @@ if atm_card=="right side" or atm_card=="RIGHT SIDE":
                                 print("all transetion succesful")
                             else:
                                 print("please cancel the transection session")    
-                        else:
-                            print("amount not are avelable")
                     else:
-                        print("current balance not avelable")
+                        print("amount not are avelable")
                 else:
                     print("please select account type") 
             elif type_option=="balance enquiry" or type_option=="BALANCE ENQUIRY":
